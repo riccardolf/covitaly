@@ -1,6 +1,8 @@
 # Covitaly
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+Personal project with [Angular](https://github.com/angular/angular) version 11. <br>
+Covid data from [Protezione Civile](https://github.com/pcm-dpc/COVID-19). <br>
+Using the utility-first CSS framework [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss).
 
 ## Development server
 
