@@ -16,10 +16,10 @@
               Nuovi Casi
             </div>
             <div class="text-4xl font-bold text-red-500">
-              +{{today.nuovi_positivi| number : '':'it'}}
+              {{today.nuovi_positivi| number : '':'it' | positiveNegativeNumber}}
             </div>
             <div class="text-sm text-red-500">
-              +{{(today.nuovi_positivi / today.totale_casi) * 100 | number: '1.1-2':'it'}}%
+              {{(today.nuovi_positivi / today.totale_casi) * 100 | number: '1.1-2':'it'| positiveNegativeNumber}}%
             </div>
             <div class="font-bold text-red-500">
               Totali {{today.totale_casi| number : '':'it'}}
@@ -35,10 +35,11 @@
               Morti
             </div>
             <div class="text-4xl font-bold">
-              +{{today.deceduti - yesterday.deceduti| number : '':'it'}}
+              {{today.deceduti - yesterday.deceduti| number : '':'it'| positiveNegativeNumber}}
             </div>
             <div class="text-sm">
-              +{{((today.deceduti - yesterday.deceduti) / today.deceduti) * 100 | number: '1.1-2':'it'}}%
+              {{((today.deceduti - yesterday.deceduti) / today.deceduti) * 100 | number: '1.1-2':'it'| positiveNegativeNumber}}
+              %
             </div>
             <div class="font-bold">
               Totali {{today.deceduti| number : '':'it'}}
@@ -55,10 +56,10 @@
                 Dimessi/Guariti
               </div>
               <div class="text-4xl font-bold text-green-600">
-                +{{today.dimessi_guariti - yesterday.dimessi_guariti| number : '':'it'}}
+                {{today.dimessi_guariti - yesterday.dimessi_guariti| number : '':'it'| positiveNegativeNumber}}
               </div>
               <div class="text-sm text-green-600">
-                +{{((today.dimessi_guariti - yesterday.dimessi_guariti) / today.dimessi_guariti) * 100 | number: '1.1-2':'it' }}
+                {{((today.dimessi_guariti - yesterday.dimessi_guariti) / today.dimessi_guariti) * 100 | number: '1.1-2':'it'| positiveNegativeNumber }}
                 %
               </div>
               <div class="font-bold text-green-600">
@@ -77,10 +78,11 @@
                 Attualmente Positivi
               </div>
               <div class="text-4xl font-bold text-red-300">
-                {{today.variazione_totale_positivi| number : '':'it'}}
+                {{today.variazione_totale_positivi| number : '':'it'| positiveNegativeNumber}}
               </div>
               <div class="text-sm text-red-300">
-                {{(today.variazione_totale_positivi / today.totale_positivi) * 100| number: '1.1-2':'it'}}%
+                {{(today.variazione_totale_positivi / today.totale_positivi) * 100| number: '1.1-2':'it'| positiveNegativeNumber}}
+                %
               </div>
               <div class="font-bold text-red-300">
                 Totali {{today.totale_positivi| number : '':'it'}}
@@ -104,10 +106,10 @@
                 Terapia Intesiva
               </div>
               <div class="text-4xl font-bold text-red-300">
-                {{today.terapia_intensiva - yesterday.terapia_intensiva| number : '':'it'}}
+                {{today.terapia_intensiva - yesterday.terapia_intensiva| number : '':'it'| positiveNegativeNumber}}
               </div>
               <div class="text-sm text-red-300">
-                {{((today.terapia_intensiva - yesterday.terapia_intensiva) / today.terapia_intensiva) * 100| number: '1.1-2':'it'}}
+                {{((today.terapia_intensiva - yesterday.terapia_intensiva) / today.terapia_intensiva) * 100| number: '1.1-2':'it'| positiveNegativeNumber}}
                 %
               </div>
               <div class="font-bold text-red-300">
@@ -125,10 +127,10 @@
                 Ricoverati Con Sintomi
               </div>
               <div class="text-4xl font-bold text-red-300">
-                +{{today.ricoverati_con_sintomi| number : '':'it'}}
+                {{today.ricoverati_con_sintomi| number : '':'it'| positiveNegativeNumber}}
               </div>
               <div class="text-sm text-red-300">
-                +{{((today.ricoverati_con_sintomi - yesterday.ricoverati_con_sintomi) / today.ricoverati_con_sintomi) * 100| number: '1.1-2':'it'}}
+                {{((today.ricoverati_con_sintomi - yesterday.ricoverati_con_sintomi) / today.ricoverati_con_sintomi) * 100| number: '1.1-2':'it'| positiveNegativeNumber}}
                 %
               </div>
               <div class="font-bold text-red-300">
@@ -146,10 +148,10 @@
                 Isolamento Domiciliare
               </div>
               <div class="text-4xl font-bold text-red-300">
-                +{{today.isolamento_domiciliare - yesterday.isolamento_domiciliare| number : '':'it'}}
+                {{today.isolamento_domiciliare - yesterday.isolamento_domiciliare| number : '':'it'| positiveNegativeNumber}}
               </div>
               <div class="text-sm text-red-300">
-                +{{((today.isolamento_domiciliare - yesterday.isolamento_domiciliare) / today.isolamento_domiciliare) * 100| number: '1.1-2':'it'}}
+                {{((today.isolamento_domiciliare - yesterday.isolamento_domiciliare) / today.isolamento_domiciliare) * 100| number: '1.1-2':'it'| positiveNegativeNumber}}
                 %
               </div>
               <div class="font-bold text-red-300">
@@ -167,10 +169,11 @@
                 Tamponi
               </div>
               <div class="text-4xl font-bold text-red-300">
-                +{{today.tamponi - yesterday.tamponi| number : '':'it'}}
+                {{today.tamponi - yesterday.tamponi| number : '':'it'| positiveNegativeNumber}}
               </div>
               <div class="text-sm text-red-300">
-                +{{((today.tamponi - yesterday.tamponi) / today.tamponi) * 100| number: '1.1-2':'it'}}%
+                {{((today.tamponi - yesterday.tamponi) / today.tamponi) * 100| number: '1.1-2':'it'| positiveNegativeNumber}}
+                %
               </div>
               <div class="font-bold text-red-300">
                 Totali {{today.tamponi| number : '':'it'}}
