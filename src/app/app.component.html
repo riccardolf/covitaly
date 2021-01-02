@@ -3,8 +3,13 @@
 <div *ngIf="loading"
      class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-64 w-64 mx-auto p-6"></div>
 
-<div *ngIf="!loading" class="flex flex-col divide-y md:divide-y-0 md:py-6">
-
+<div *ngIf="!loading" class="flex flex-col divide-y md:divide-y-0">
+  <div class="w-full text-center text-xl font-semibold py-6">
+    <h1 class="mx-auto text-center">Coronavirus in Italia, i dati e la mappa</h1>
+    <h3 class="mx-auto text-center">Dati aggiornati
+      al {{this.today.data | date : 'longDate' : '+0100' : 'it' | uppercase}}. Variazioni rispetto al giorno
+      precedente.</h3>
+  </div>
   <div class="w-full mx-auto px-6 md:px-8">
     <div
       class="flex flex-col md:flex-row w-full md:space-x-2 space-y-2 md:space-y-0 mb-2 md:mb-4 divide-y divide-gray-300 md:divide-x md:divide-y-0">
@@ -184,4 +189,8 @@
       </div>
     </div>
   </div>
+
+  <h3 class="p-6 mx-auto text-center text-xl font-semibold">La mappa del coronavirus in Italia</h3>
+
+  <app-map></app-map>
 </div>

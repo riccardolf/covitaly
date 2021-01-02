@@ -59,6 +59,10 @@ code {
   box-shadow: none;
 }
 
+legend {
+  padding: 0;
+}
+
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   height: auto;
@@ -76,6 +80,11 @@ code {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
+}
+
+h1,
+h3 {
+  margin: 0;
 }
 
 html {
@@ -105,6 +114,12 @@ img {
   cursor: pointer;
 }
 
+h1,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -122,51 +137,6 @@ img {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.debug-screens::before {
-  position: fixed;
-  z-index: 2147483647;
-  bottom: 0;
-  left: 0;
-  padding: .3333333em .5em;
-  font-size: 12px;
-  line-height: 1;
-  font-family: sans-serif;
-  background-color: #000;
-  color: #fff;
-  box-shadow: 0 0 0 1px #fff;
-  content: 'screen: _';
-}
-
-@media (min-width: 640px) {
-  .debug-screens::before {
-    content: 'screen: sm';
-  }
-}
-
-@media (min-width: 768px) {
-  .debug-screens::before {
-    content: 'screen: md';
-  }
-}
-
-@media (min-width: 1024px) {
-  .debug-screens::before {
-    content: 'screen: lg';
-  }
-}
-
-@media (min-width: 1280px) {
-  .debug-screens::before {
-    content: 'screen: xl';
-  }
-}
-
-@media (min-width: 1536px) {
-  .debug-screens::before {
-    content: 'screen: 2xl';
-  }
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -252,6 +222,10 @@ img {
   flex-shrink: 0;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -280,6 +254,11 @@ img {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-4xl {
@@ -313,6 +292,11 @@ img {
   padding-right: 0.5rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -333,6 +317,10 @@ img {
   --tw-ring-color: rgba(59, 130, 246, 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-red-300 {
@@ -452,11 +440,6 @@ img {
 
   .md\:mb-4 {
     margin-bottom: 1rem;
-  }
-
-  .md\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
   }
 
   .md\:px-8 {
